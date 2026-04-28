@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ParticleField from "./ParticleField";
 import logo from "@/assets/persona-logo.jpeg";
+import { getEventDateText } from "@/lib/utils";
 
 const headline = "Unwind. Connect. Make memories.";
 const words = headline.split(" ");
@@ -79,7 +80,7 @@ const Hero = () => {
 
         <motion.div variants={item} className="inline-block">
           <div className="glass-card glow-border rounded-full px-5 py-2 text-xs sm:text-sm tracking-[0.25em] uppercase text-teal pulse-glow">
-            🚀 Fun Day · Tomorrow 5:30 PM IST
+            🚀 Fun Day · {getEventDateText()} 5:30 PM IST
           </div>
         </motion.div>
 
@@ -107,7 +108,7 @@ const Hero = () => {
             📍 <span className="font-semibold">IS Seminar Hall</span>
           </span>
           <span className="glass-card rounded-full px-4 py-2 text-xs sm:text-sm tracking-wide text-teal flex items-center gap-2">
-            ⏰ <span className="font-semibold">Tomorrow · 5:30 PM IST</span>
+            ⏰ <span className="font-semibold">{getEventDateText()} · 5:30 PM IST</span>
           </span>
         </motion.div>
 

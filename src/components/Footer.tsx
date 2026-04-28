@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/persona-logo.jpeg";
+import { getEventDateText } from "@/lib/utils";
 
 const Footer = () => {
   return (
@@ -47,7 +48,7 @@ const Footer = () => {
         >
           Organized by Persona Plus
           <br />
-          Tomorrow · 5:30 PM IST · IS Seminar Hall
+          {getEventDateText()} · 5:30 PM IST · IS Seminar Hall
         </motion.p>
         <motion.div
           variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}

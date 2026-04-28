@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-
-const stats = [
-  { title: "Tomorrow · 5:30 PM IST", emoji: "⏰" },
-  { title: "IS Seminar Hall", emoji: "📍" },
-  { title: "Snacks · Games · Glory", emoji: "🏆" },
-];
+import { getEventDateText } from "@/lib/utils";
 
 const headlineLines = ["What is", "Persona+ Connect?"];
 
 const About = () => {
+  const stats = [
+    { title: `${getEventDateText()} · 5:30 PM IST`, emoji: "⏰" },
+    { title: "IS Seminar Hall", emoji: "📍" },
+    { title: "Snacks · Games · Glory", emoji: "🏆" },
+  ];
+
   return (
     <section id="about" className="relative py-32 px-6 max-w-7xl mx-auto">
       <motion.div
